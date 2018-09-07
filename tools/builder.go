@@ -12,29 +12,29 @@ import (
 func main() {
 	installPaths := []string{
 
-		"cd /home/febe/go/src/andy/booking/lib/configuration && go install",
-		"cd /home/febe/go/src/andy/booking/lib/helper/amqp && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/configuration && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/helper/amqp && go install",
 
-		"cd /home/febe/go/src/andy/booking/lib/helper/kafka && go install",
-		"cd /home/febe/go/src/andy/booking/lib/msgqueue/amqp && go install",
-		"cd /home/febe/go/src/andy/booking/lib/msgqueue/builder && go install",
-		"cd /home/febe/go/src/andy/booking/lib/msgqueue/kafka && go install",
-		"cd /home/febe/go/src/andy/booking/lib/msgqueue && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/helper/kafka && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/msgqueue/amqp && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/msgqueue/builder && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/msgqueue/kafka && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/msgqueue && go install",
 
-		"cd /home/febe/go/src/andy/booking/lib/persistence/mongolayer && go install",
-		"cd /home/febe/go/src/andy/booking/lib/persistence/dblayer && go install",
-		"cd /home/febe/go/src/andy/booking/lib/persistence && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/persistence/mongolayer && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/persistence/dblayer && go install",
+		"cd /home/febe/go/src/andy/booking_publish/lib/persistence && go install",
 
-		"cd /home/febe/go/src/andy/booking/bookingservice/listener && go install",
-		"cd /home/febe/go/src/andy/booking/bookingservice/rest && go install",
-		"cd /home/febe/go/src/andy/booking/contracts && go install",
-		"cd /home/febe/go/src/andy/booking/eventService/rest && go install",
-		"cd /home/febe/go/src/andy/booking/eventService/listner && go install",
+		"cd /home/febe/go/src/andy/booking_publish/bookingservice/listener && go install",
+		"cd /home/febe/go/src/andy/booking_publish/bookingservice/rest && go install",
+		"cd /home/febe/go/src/andy/booking_publish/contracts && go install",
+		"cd /home/febe/go/src/andy/booking_publish/eventService/rest && go install",
+		"cd /home/febe/go/src/andy/booking_publish/eventService/listner && go install",
 	}
 
 	buildPaths := []string{
-		"cd /home/febe/go/src/andy/booking/bookingservice && go build main.go",
-		"cd /home/febe/go/src/andy/booking/eventService && go build main.go",
+		"cd /home/febe/go/src/andy/booking_publish/bookingservice && go build main.go",
+		"cd /home/febe/go/src/andy/booking_publish/eventService && go build main.go",
 	}
 	for _, p := range installPaths {
 		execCommand(p)
