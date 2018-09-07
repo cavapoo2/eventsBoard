@@ -1,5 +1,22 @@
+This is my first react/typescript app.
+Its a simple events/ booking system. Users can sign up (register) and log in and see current events. Admin users create events for normal users to see. Normal users can then book events. 
+The front end is using typescript and the backend is golang. The backend is using mongo db (2 instances) to persist as well as rabbitmq to send messages to either database. This is also Dockerized. 
 
-#use the simpleEvent.go to build some json input files. 
+
+There is lots more work that could be done with this such as :
+(1) Test more, add testing, Unit testing , improve code structures.
+(2) improve user interface. Its using very simple Bootstrap right now.
+(3) Think how this can be scaled better. 
+(4) improve authentication. Its really basic email and password so far.
+(5) add travis or CI
+(6) improve logging
+(7) maybe use redux. 
+(8) monitoring (data dog)
+
+
+
+
+#use the simpleEvent.go in tools to build some json input files for testing the backend. 
 #use the bash scripts to send GET/POST messages.
 #use the builder to build project go files (see other directory (simple builder)
 
