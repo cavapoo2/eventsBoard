@@ -1,3 +1,6 @@
+INTRO
+-----
+
 This is my first react/typescript app still work in progress.
 Its a simple events/ booking system. Users can sign up (register) and log in and see current events. Admin users create events for normal users to see. Normal users can then book events. 
 The front end is using typescript and the backend is golang. The backend is using mongo db (2 instances) to persist as well as rabbitmq to send messages to either database. This is also Dockerized. 
@@ -7,8 +10,18 @@ INSTALL
 `go get -u github.com/cavapoo2/eventsBoard`
 
 cd into tools and run:
+
 `go build builder.go`
 
+then cd .. and run 
+
+tools\builder
+
+that should build the main programs for golang back end the booking service and event service
+
+cd into booking_front and run (note you need node installed, I'm using node v8.11.3 and npm 5.6.0 on ubuntu 16.04)
+
+`npm install` 
 
 -----------------------------------------
 
