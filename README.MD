@@ -15,7 +15,7 @@ cd into tools and run:
 
 then cd .. and run 
 
-tools\builder
+`tools\builder`
 
 that should build the main programs for golang back end the booking service and event service
 
@@ -23,24 +23,7 @@ cd into booking_front and run (note you need node installed, I'm using node v8.1
 
 `npm install` 
 
------------------------------------------
-
-There is lots more work that could be done with this such as :
-(1) Test more, add testing, Unit testing , improve code structures.
-(2) improve user interface. Its using very simple Bootstrap right now.
-(3) Think how this can be scaled better. 
-(4) improve authentication. Its really basic email and password so far.
-(5) add travis or CI
-(6) improve logging
-(7) maybe use redux. 
-(8) monitoring (data dog)
-
-
-
-
-#use the simpleEvent.go in tools to build some json input files for testing the backend. 
-#use the bash scripts to send GET/POST messages.
-#use the builder to build project go files (see other directory (simple builder)
+to set up the back end (only tested locally)
 
 first make sure you have rabbitmq setup (this is for ubuntu via docker)
 docker run --detach \
@@ -135,9 +118,15 @@ docker container run --name frontend -p 80:80 myevents/frontend
 ## Alternatively rather than using docker as above (whuch is good way to test its all working) can instead use the ##docker-compose which will build and run the whole lot in one go
 docker-compose up -d
 
-##########
-##USAGE##
-#########
+CREATING SOME ADMIN USERS
+--------------------------
+
+#use the simpleEvent.go in tools to build some json input files for testing the backend. 
+#use the bash scripts to send GET/POST messages.
+#use the builder to build project go files (see other directory (simple builder)
+
+
+
 #check its all running with docker ps -a
 #use the bash script 
 newEvent outx.json 
@@ -149,7 +138,21 @@ makeBooking bash script.
 
 #you can view this by going to http://localhost
 
-#this is all skeleton code, front end needs login credentials to add new events / users. booking frontend buttton needs to use the user id to actually make a button which missing. TODO
+
+
+TODO (LOTS!)
+------------
+
+There is lots more work that could be done with this such as :
+(1) Test more, add testing, Unit testing , improve code structures.
+(2) improve user interface. Its using very simple Bootstrap right now.
+(3) Think how this can be scaled better. 
+(4) improve authentication. Its really basic email and password so far.
+(5) add travis or CI
+(6) improve logging
+(7) maybe use redux. 
+(8) monitoring (data dog)
+
 
     © 2018 GitHub, Inc.
     Terms
