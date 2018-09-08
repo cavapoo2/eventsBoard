@@ -4,7 +4,10 @@ The front end is using typescript and the backend is golang. The backend is usin
 
 INSTALL
 -------
-go get -u github.com/cavapoo2/eventsBoard
+`go get -u github.com/cavapoo2/eventsBoard`
+
+cd into tools and run:
+`go build builder.go`
 
 
 -----------------------------------------
