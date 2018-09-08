@@ -26,11 +26,12 @@ cd into booking_front and run (note you need node installed, I'm using node v8.1
 to set up the back end (only tested locally)
 
 first make sure you have rabbitmq setup (this is for ubuntu via docker, so yes you need docker installed)
+`
 docker run --detach \
 --name rabbitmq \
 -p 5672:5672 \
 -p 15672:15672 \
-rabbitmq:3-management
+rabbitmq:3-management`
 
 make sure mongo is setup/installed.
 
