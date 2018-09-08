@@ -28,9 +28,13 @@ to set up the back end (only tested locally)
 first make sure you have rabbitmq setup (this is for ubuntu via docker, so yes you need docker installed)
 `
 docker run --detach \
+
 --name rabbitmq \
+
 -p 5672:5672 \
+
 -p 15672:15672 \
+
 rabbitmq:3-management`
 
 make sure mongo is setup/installed.
@@ -68,7 +72,7 @@ and another
 `mongo --port 27018`
 
 you can now start the front end (cd into booking_front) :
-
+    
 `npm run start`
 
 ALTERNATIVE DOCKER SETUP
@@ -78,35 +82,47 @@ make sure the binary exe's in both bookingservice and eventservice are name to t
 
 the Dockerfile in each of the bookingservice and eventservice folders are as follows:
 
-#event service docker file (this is the dockerfile)
+this is the event service docker file
 
 `FROM debian:jessie
+
 COPY eventservice /eventservice
+
 RUN useradd eventservice
+
 USER eventservice
+
 ENV LISTEN_URL=0.0.0.0:8181
+
 EXPOSE 8181
+
 CMD ["/eventservice"]`
 
-build the image like this in eventService folder like this:
+build the image like this in eventservice folder:
 
 `docker image build -t myevents/eventservice .`
 
-likewise in the bookingservice folder (this is the dockerfile)
+likewise in the bookingservice folder, the docker file is as follows:
 
 `FROM debian:jessie
+
 COPY bookingservice /bookingservice
+
 RUN useradd bookingservice
+
 USER bookingservice
+
 ENV LISTEN_URL=0.0.0.0:8181
+
 EXPOSE 8181
+
 CMD ["/bookingservice"]`
 
 build like this (in the bookingservice folder)
 
 `docker image build -t myevents/bookingservice .`
 
-add a container network
+add a container network.
 
 `docker network create myevents`
 
