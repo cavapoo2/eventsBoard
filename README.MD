@@ -161,7 +161,7 @@ run the bookingservice like this
 
 `docker container run --detach --name bookings --network myevents -e AMQP_BROKER_URL=amqp://guest:guest@rabbitmq:5672/ -e MONGO_URL=mongodb://bookings-db/bookings -p 8182:8181 myevents/bookingservice`
 
-run the booking_front end like this
+run the booking_front end like this (cd into booking_front)
 
 `docker container build -t myevents/frontend .`
 
