@@ -146,15 +146,16 @@ bookings-db like this (make sure its a seperate instance, hence 20718)
 `docker container run -d -p 20718:20718 --name bookings-db --network myevents mongo`
 
 run eventservice like this
-
-`docker container run \
+```
+docker container run \
 --detach \
 --name events \
 --network myevents \
 -e AMQP_BROKER_URL=amqp://guest:guest@rabbitmq:5672/ \
 -e MONGO_URL=mongodb://events-db/events \
 -p 8181:8181 \
-myevents/eventservice`
+myevents/eventservice
+```
 
 run the bookingservice like this
 
