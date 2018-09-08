@@ -36,6 +36,7 @@ docker run --detach \
 -p 15672:15672 \
 
 rabbitmq:3-management
+
 ```
 
 make sure mongo is setup/installed.
