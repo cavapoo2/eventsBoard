@@ -25,7 +25,7 @@ cd into booking_front and run (note you need node installed, I'm using node v8.1
 
 to set up the back end (only tested locally)
 
-first make sure you have rabbitmq setup (this is for ubuntu via docker)
+first make sure you have rabbitmq setup (this is for ubuntu via docker, so yes you need docker installed)
 docker run --detach \
 --name rabbitmq \
 -p 5672:5672 \
@@ -33,6 +33,31 @@ docker run --detach \
 rabbitmq:3-management
 
 make sure mongo is setup/installed.
+
+in one terminal do :
+
+`sudo mongod --dbpath /var/lib/mongodb --port 27017`
+
+in another terminal do:
+
+`mongod --dbpath ~/go/src/andy/booking/bookingservice/db --port 27018`
+
+you now have 2 instances of mongod running . The first mongod will use /etc/mongo.conf settings for dbpath. you can optionally chose dbpath (with --dbpath) if you want just like the second command did. you can also use the `sudo service mongod start` approach.
+
+in the eventService folder do :
+
+`./main` 
+
+to start the backend eventservice. Also in the bookingservice folder do:
+
+`./main -conf=config.json`
+
+to start the backend booking service.
+
+
+
+
+
 
 in the /eventService folder run the main in a terminal . this will use rest at localhost:8181 mongo at port default(27017).
 For this i started mongo prior to running this main via sudo service mongod start (this uses 27017) and gets its config from /etc/mongo.conf
