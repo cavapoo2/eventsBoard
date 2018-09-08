@@ -59,9 +59,16 @@ this config.json sets up the bookingservice to use mongo port 27018
 and the rest interface for the booking service is localhost:8182
 
 open 2 more terminals one for (both for mongo cli)  
-mongo --port 27017
+
+`mongo --port 27017`
+
 and another
-mongo --port 27018
+
+`mongo --port 27018`
+
+you can now start the front end (cd into booking_front) :
+
+`npm run start`
 
 ALTERNATIVE DOCKER SETUP
 -------------------------
