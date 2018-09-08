@@ -1,8 +1,9 @@
 package mongolayer
 
 import (
-	"andy/booking_publish/lib/persistence"
 	"log"
+
+	"github.com/cavapoo2/eventsBoard/lib/persistence"
 
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"

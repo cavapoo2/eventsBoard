@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"andy/booking_publish/contracts"
+	"github.com/cavapoo2/eventsBoard/contracts"
 
 	"github.com/mitchellh/mapstructure"
 )

@@ -7,8 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	"andy/booking_publish/lib/persistence/dblayer"
 	"log"
+
+	"github.com/cavapoo2/eventsBoard/lib/persistence/dblayer"
 )
 
 var (

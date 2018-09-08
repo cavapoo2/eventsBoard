@@ -7,7 +7,7 @@ import (
 	"gopkg.in/mgo.v2/bson"
 	//different ?
 	//"github.com/minamartinteam/cloudnativego-backend/src/lib/persistence"
-	"andy/booking_publish/lib/persistence"
+	"github.com/cavapoo2/eventsBoard/lib/persistence"
 )
 
 func TestExamineDatabaseCalls(t *testing.T) {

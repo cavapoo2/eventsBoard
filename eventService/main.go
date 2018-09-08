@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"time"
 
-	"andy/booking_publish/eventService/listner"
-	"andy/booking_publish/eventService/rest"
-	"andy/booking_publish/lib/configuration"
-	"andy/booking_publish/lib/msgqueue"
-	msgqueue_amqp "andy/booking_publish/lib/msgqueue/amqp"
-	"andy/booking_publish/lib/msgqueue/kafka"
-	"andy/booking_publish/lib/persistence/dblayer"
+	"github.com/cavapoo2/eventsBoard/eventService/listner"
+	"github.com/cavapoo2/eventsBoard/eventService/rest"
+	"github.com/cavapoo2/eventsBoard/lib/configuration"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
+	msgqueue_amqp "github.com/cavapoo2/eventsBoard/lib/msgqueue/amqp"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue/kafka"
+	"github.com/cavapoo2/eventsBoard/lib/persistence/dblayer"
 
 	"github.com/Shopify/sarama"
 

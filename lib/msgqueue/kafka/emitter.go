@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"andy/booking_publish/lib/helper/kafka"
-	"andy/booking_publish/lib/msgqueue"
+	"github.com/cavapoo2/eventsBoard/lib/helper/kafka"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
 
 	"github.com/Shopify/sarama"
 )

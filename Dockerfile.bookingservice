@@ -1,6 +1,6 @@
 FROM golang:1.9
 
-WORKDIR /go/src/andy/booking_publish
+WORKDIR /go/src/github.com/cavapoo2/eventsBoard
 
 COPY . .
 WORKDIR bookingservice
@@ -18,7 +18,7 @@ RUN \
 
 FROM scratch
 
-COPY --from=0 /go/src/andy/booking_publish/bookingservice/bookingservice /bookingservice
+COPY --from=0 /go/src/github.com/cavapoo2/eventsBoard/bookingservice/bookingservice /bookingservice
 ENV LISTEN_URL=0.0.0.0:8181
 EXPOSE 8181
 CMD ["/bookingservice"]

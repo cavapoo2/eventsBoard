@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	amqphelper "andy/booking_publish/lib/helper/amqp"
-	"andy/booking_publish/lib/msgqueue"
+	amqphelper "github.com/cavapoo2/eventsBoard/lib/helper/amqp"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
 
 	"log"
 

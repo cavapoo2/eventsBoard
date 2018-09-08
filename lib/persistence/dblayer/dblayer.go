@@ -1,9 +1,10 @@
 package dblayer
 
 import (
-	"andy/booking_publish/lib/persistence"
-	"andy/booking_publish/lib/persistence/mongolayer"
 	"log"
+
+	"github.com/cavapoo2/eventsBoard/lib/persistence"
+	"github.com/cavapoo2/eventsBoard/lib/persistence/mongolayer"
 )
 
 type DBTYPE string

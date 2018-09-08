@@ -1,6 +1,6 @@
 package contracts
 
-import "andy/booking_publish/lib/persistence"
+import "github.com/cavapoo2/eventsBoard/lib/persistence"
 
 //UserCreatedEvent is emitted whenever a new user is created
 type AdminUserCreatedEvent struct {

@@ -1,6 +1,6 @@
 package contracts
 
-import "andy/booking_publish/lib/persistence"
+import "github.com/cavapoo2/eventsBoard/lib/persistence"
 
 // LocationCreatedEvent is emitted whenever a location is created
 type LocationCreatedEvent struct {

@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
-	"andy/booking_publish/lib/msgqueue"
-	"andy/booking_publish/lib/msgqueue/amqp"
-	"andy/booking_publish/lib/msgqueue/kafka"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue/amqp"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue/kafka"
 )
 
 func init() {

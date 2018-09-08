@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"andy/booking_publish/contracts"
-	"andy/booking_publish/lib/msgqueue"
-	"andy/booking_publish/lib/persistence"
+	"github.com/cavapoo2/eventsBoard/contracts"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
+	"github.com/cavapoo2/eventsBoard/lib/persistence"
 
 	"gopkg.in/mgo.v2/bson"
 )

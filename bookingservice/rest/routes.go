@@ -3,8 +3,8 @@ package rest
 import (
 	"net/http"
 
-	"andy/booking_publish/lib/msgqueue"
-	"andy/booking_publish/lib/persistence"
+	"github.com/cavapoo2/eventsBoard/lib/msgqueue"
+	"github.com/cavapoo2/eventsBoard/lib/persistence"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
