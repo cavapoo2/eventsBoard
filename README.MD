@@ -86,7 +86,8 @@ the Dockerfile in each of the bookingservice and eventservice folders are as fol
 
 this is the event service docker file
 
-```FROM debian:jessie
+```
+FROM debian:jessie
 
 COPY eventservice /eventservice
 
@@ -98,7 +99,8 @@ ENV LISTEN_URL=0.0.0.0:8181
 
 EXPOSE 8181
 
-CMD ["/eventservice"]```
+CMD ["/eventservice"]
+```
 
 build the image like this in eventservice folder:
 
@@ -106,7 +108,8 @@ build the image like this in eventservice folder:
 
 likewise in the bookingservice folder, the docker file is as follows:
 
-```FROM debian:jessie
+```
+FROM debian:jessie
 
 COPY bookingservice /bookingservice
 
@@ -118,7 +121,8 @@ ENV LISTEN_URL=0.0.0.0:8181
 
 EXPOSE 8181
 
-CMD ["/bookingservice"]```
+CMD ["/bookingservice"]
+```
 
 build like this (in the bookingservice folder)
 
