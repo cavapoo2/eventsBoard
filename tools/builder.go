@@ -43,6 +43,8 @@ func main() {
 	buildPaths := []string{
 		base + "bookingservice && go build main.go",
 		base + "eventService && go build main.go",
+		base + "eventService && go build -o eventservice main.go",
+		base + "bookingservice && go build -o bookingservice main.go",
 	}
 	for _, p := range installPaths {
 		execCommand(p)
