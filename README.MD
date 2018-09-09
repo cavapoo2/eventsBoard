@@ -218,14 +218,23 @@ TODO (LOTS!)
 ------------
 
 There is lots more work that could be done with this such as :
+
 (1) Test more, add testing, Unit testing , improve code structures.
+
 (2) improve user interface. Its using very simple Bootstrap right now.
+
 (3) Think how this can be scaled better. 
+
 (4) improve authentication. Its really basic email and password so far.
+
 (5) add travis or CI
+
 (6) improve logging
+
 (7) maybe use redux. 
+
 (8) monitoring (data dog)
+
 (9) get a production build working for the font_end
 
 
