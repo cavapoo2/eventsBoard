@@ -1,5 +1,4 @@
 import * as React from "react";
-import {Link} from "react-router-dom";
 import {Event} from "../model/event";
 
 export interface EventListItemProps {

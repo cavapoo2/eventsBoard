@@ -1,5 +1,4 @@
 import * as React from "react";
-import {EventList} from "./event_list";
 import {Loader} from "./loader";
 import {Booking} from "../model/event";
 import {RouteComponentProps} from 'react-router-dom'

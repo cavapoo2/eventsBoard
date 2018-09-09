@@ -9,10 +9,8 @@ export interface EventListProps {
     onEventBooked: (e: Event) => any;
 }
 
-//<td><Link to={`/bookings/${this.props.event.ID}/${this.props.userID}/bookings`}
 export class EventList extends React.Component<EventListProps, {}> {
     public render() {
-       // console.log('EventList userid=', this.props.userID)
         const items = this.props.events.map(event =>
             <EventListItem key={event.ID} userID={this.props.userID} event={event} onBooked={() => this.props.onEventBooked(event)} />
         );

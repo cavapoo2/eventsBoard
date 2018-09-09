@@ -3,7 +3,9 @@ FROM golang:1.9
 WORKDIR /go/src/github.com/cavapoo2/eventsBoard
 
 COPY . .
+
 WORKDIR bookingservice
+
 
 RUN \
 	go get -u github.com/Shopify/sarama && \

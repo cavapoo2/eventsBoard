@@ -1,7 +1,5 @@
 import * as React from "react";
-import { EventListItem } from "./event_list_item";
 import { BookingListItem } from "./booking_list_item";
-import { Event } from "../model/event";
 import { Link } from 'react-router-dom';
 import {Booking} from "../model/event";
 export interface BookingListProps {

@@ -1,7 +1,5 @@
 import * as React from "react";
-import {Booking} from "../model/event";
-import { Button, FormGroup, FormControl, ControlLabel, FormControlProps, HelpBlock, FormControlFeedback } from "react-bootstrap";
-import { createBrowserHistory } from "history";
+import {  FormGroup, FormControl, ControlLabel, FormControlProps, HelpBlock  } from "react-bootstrap";
 
 export interface AdminHallItemProps {
     index:number;

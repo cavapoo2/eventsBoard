@@ -1,12 +1,6 @@
 import * as React from "react";
-import {EventList} from "./event_list";
-import {Loader} from "./loader";
-import {Booking} from "../model/event";
-import {RouteComponentProps} from 'react-router-dom'
-import {BookingList} from './booking_list' 
-import { Button, FormGroup, FormControl, ControlLabel, FormControlProps, HelpBlock, FormControlFeedback } from "react-bootstrap";
+import {  FormGroup, FormControl, ControlLabel, FormControlProps, HelpBlock } from "react-bootstrap";
 import { AdminHallList } from "./admin_hall_list";
-import {AdminHallItemState} from "./admin_hall_item"
 
 
 //export interface AdminHallContainerProps extends RouteComponentProps<any> {

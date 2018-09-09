@@ -1,7 +1,6 @@
 import * as React from "react";
 import {AdminEventsCreatedList} from "./admin_events_created_list";
 import {Event} from "../model/event";
-//import {Link} from 'react-router-dom';
 
 export interface AdminEventsCreatedContainerProps {
     userID:string;
