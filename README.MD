@@ -26,12 +26,18 @@ cd into booking_front and run (note you need node installed, I'm using node v8.1
 to set up the back end (only tested locally)
 
 first make sure you have rabbitmq setup (this is for ubuntu via docker, so yes you need docker installed)
-`
+```
 docker run --detach \
+
 --name rabbitmq \
+
 -p 5672:5672 \
+
 -p 15672:15672 \
-rabbitmq:3-management`
+
+rabbitmq:3-management
+
+```
 
 make sure mongo is setup/installed.
 
@@ -68,7 +74,7 @@ and another
 `mongo --port 27018`
 
 you can now start the front end (cd into booking_front) :
-
+    
 `npm run start`
 
 ALTERNATIVE DOCKER SETUP
@@ -78,35 +84,51 @@ make sure the binary exe's in both bookingservice and eventservice are name to t
 
 the Dockerfile in each of the bookingservice and eventservice folders are as follows:
 
-#event service docker file (this is the dockerfile)
+this is the event service docker file
 
-`FROM debian:jessie
+```
+FROM debian:jessie
+
 COPY eventservice /eventservice
-RUN useradd eventservice
-USER eventservice
-ENV LISTEN_URL=0.0.0.0:8181
-EXPOSE 8181
-CMD ["/eventservice"]`
 
-build the image like this in eventService folder like this:
+RUN useradd eventservice
+
+USER eventservice
+
+ENV LISTEN_URL=0.0.0.0:8181
+
+EXPOSE 8181
+
+CMD ["/eventservice"]
+```
+
+build the image like this in eventservice folder:
 
 `docker image build -t myevents/eventservice .`
 
-likewise in the bookingservice folder (this is the dockerfile)
+likewise in the bookingservice folder, the docker file is as follows:
 
-`FROM debian:jessie
+```
+FROM debian:jessie
+
 COPY bookingservice /bookingservice
+
 RUN useradd bookingservice
+
 USER bookingservice
+
 ENV LISTEN_URL=0.0.0.0:8181
+
 EXPOSE 8181
-CMD ["/bookingservice"]`
+
+CMD ["/bookingservice"]
+```
 
 build like this (in the bookingservice folder)
 
 `docker image build -t myevents/bookingservice .`
 
-add a container network
+add a container network.
 
 `docker network create myevents`
 
@@ -124,21 +146,22 @@ bookings-db like this (make sure its a seperate instance, hence 20718)
 `docker container run -d -p 20718:20718 --name bookings-db --network myevents mongo`
 
 run eventservice like this
-
-`docker container run \
+```
+docker container run \
 --detach \
 --name events \
 --network myevents \
 -e AMQP_BROKER_URL=amqp://guest:guest@rabbitmq:5672/ \
 -e MONGO_URL=mongodb://events-db/events \
 -p 8181:8181 \
-myevents/eventservice`
+myevents/eventservice
+```
 
 run the bookingservice like this
 
 `docker container run --detach --name bookings --network myevents -e AMQP_BROKER_URL=amqp://guest:guest@rabbitmq:5672/ -e MONGO_URL=mongodb://bookings-db/bookings -p 8182:8181 myevents/bookingservice`
 
-run the booking_front end like this
+run the booking_front end like this (cd into booking_front)
 
 `docker container build -t myevents/frontend .`
 
