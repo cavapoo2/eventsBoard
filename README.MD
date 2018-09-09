@@ -169,6 +169,12 @@ then
 
 `docker container run --name frontend -p 80:80 myevents/frontend`	 
 
+you can go to:
+
+localhost
+
+in your web browser.
+
 ALTERNATIVE WITH DOCKER COMPOSE
 --------------------------------
 
