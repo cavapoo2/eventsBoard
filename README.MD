@@ -178,36 +178,40 @@ in your web browser.
 ALTERNATIVE WITH DOCKER COMPOSE
 --------------------------------
 
-Alternatively rather than using docker as above (whuch is good way to test its all working) can instead use the docker-compose which will build and run the whole lot in one go
+Alternatively rather than using docker as above (whuch is good way to test its all working) can instead use the docker-compose which will build and run the whole lot in one go. Note good to do following if starting from fresh
+
+`docker kill $(docker ps -q)`
+
+`docker system prune -a`
+
 
 `docker-compose up -d`
+
+you can use this command to view the mongo database if using these docker containers
+
+`docker exec -it container_id mongo`
+
+this will bring you to the mongo shell where you can run 
+
+`show dbs`
+
+`use some_db`
+
+`show collections`
+
+`db.some_db.find().pretty()`
+
+
 
 CREATING SOME ADMIN USERS
 --------------------------
 
+Admin user creation is not completed yet. I think typically owner of site would vet admin user and then the site owner would setup a password for the admin user. To get around this for now just use the admin bash script in scripts
 
+`adminUser adminuser0.json`
 
-#use the simpleEvent.go in tools to build some json input files for testing the backend. 
-#use the bash scripts to send GET/POST messages.
-#use the builder to build project go files (see other directory (simple builder)
-
-now use the bash script to create an even (newEvent). and another to create a new user (newUser). check the mongo cli
-both these scripts talk to endpoint localhost:8181. these events are written to mongo db (27017) and via amqp its replicated
-to the other mongo db at 27018. 
-now send a makeBooking . this talks to end point localhost:8182, and updates the mongo db at 27018 only.
-
-
-#check its all running with docker ps -a
-#use the bash script 
-newEvent outx.json 
-#to send events
-#also bash sript to send new user
-newUser userx.json
-#then you can make booking via
-makeBooking bash script.
-
-#you can view this by going to http://localhost
-
+then log in as an admin user using these credentials. To login via and admin, first go to the localhost:8080 or just localhost if using dockered version. The hash should appear at the end (localhost:8080/#) and just append admain like this
+(localhost:8080/#/admin) . When you log in as an admin user you can then create events. Normal users can only book events.
 
 
 TODO (LOTS!)
@@ -222,6 +226,7 @@ There is lots more work that could be done with this such as :
 (6) improve logging
 (7) maybe use redux. 
 (8) monitoring (data dog)
+(9) get a production build working for the font_end
 
 
     © 2018 GitHub, Inc.
